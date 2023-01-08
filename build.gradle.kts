@@ -1,11 +1,9 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.5.30"
+    kotlin("jvm") version "1.8.0"
     application
 }
 
-group = "me.stephan"
+group = "me.stephans"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -20,11 +18,12 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
-tasks {
-    withType<KotlinCompile>() {
-        kotlinOptions.jvmTarget = "11"
-    }
+kotlin {
+    // uses org.gradle.java.installations.auto-download=false in gradle.properties to disable auto provisioning of JDK
+    jvmToolchain(17)
+}
 
+tasks {
     test {
         useTestNG()
     }
