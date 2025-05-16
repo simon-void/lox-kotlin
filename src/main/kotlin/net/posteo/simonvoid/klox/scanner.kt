@@ -1,4 +1,4 @@
-package net.posteo.simonvoid
+package net.posteo.simonvoid.klox
 
 //class Scanner(
 //    private val errorReporter: ErrorReporter,

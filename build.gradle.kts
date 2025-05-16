@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.20"
+    kotlin("jvm") version "2.1.21"
     application
 }
 
@@ -11,7 +11,7 @@ repositories {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass = "net.posteo.simonvoid.klox.MainKt"
 }
 
 dependencies {
@@ -20,7 +20,7 @@ dependencies {
 
 kotlin {
     // uses org.gradle.java.installations.auto-download=false in gradle.properties to disable auto provisioning of JDK
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 tasks {
